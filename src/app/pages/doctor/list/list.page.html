@@ -1,9 +1,46 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>list</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content class="content">
+  <ion-grid class="p_doc">
+    <p class="heading_title">Popular Doctors
+      <ion-button size="small" fill="clear" color="primary" [routerLink]="['/restaurants']">Show all</ion-button>
+    </p>
+    <ion-row class="boxes">
+      <ion-card class="box" *ngFor="let item of [].constructor(5)" (click)="selectDoctor(item)">
+        <ion-card-header class="_img" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+         url(https://www.pngarts.com/files/3/Female-Doctor-PNG-Picture.png) center top / cover"></ion-card-header>
+        <ion-card-content class="_info">
+          <span class="_name">Dr. Siddika Sultana Nira</span>
+          <span class="_exp">Gynecological Oncology</span>
+          <span class="_rate">
+            <span>
+              <svg class="icon"><use xlink:href="#star-full" /></svg>
+              <svg class="icon"><use xlink:href="#star-full" /></svg>
+              <svg class="icon"><use xlink:href="#star-full" /></svg>
+              <svg class="icon"><use xlink:href="#star-half" /></svg>
+              <svg class="icon"><use xlink:href="#star" /></svg>
+            </span>
+            <span>25 reviews</span>
+          </span>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="p_doc">
+    <p class="heading_title">Recomemded for you
+      <ion-button size="small" fill="clear" color="primary" [routerLink]="['/restaurants']">Show all</ion-button>
+    </p>
+    <ion-row class="boxes">
+      <ion-card class="box" *ngFor="let item of [].constructor(5)" (click)="selectDoctor(item)">
+        <ion-card-header class="_img" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+         url(http://pngimg.com/uploads/doctor/doctor_PNG16007.png) center top / cover"></ion-card-header>
+        <ion-card-content class="_info">
+          <span class="_name">Dr. M. Quamrul Islam Talukder</span>
+          <span class="_exp">Cardiovascular & Thoracic Surgeon</span>
+          <span class="_dis">
+            <span>Dhanmondi, Dhaka</span>
+            <span>5km.</span>
+          </span>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
 </ion-content>
