@@ -12,11 +12,7 @@
           <span class="_exp">Gynecological Oncology</span>
           <span class="_rate">
             <span>
-              <svg class="icon"><use xlink:href="#star-full" /></svg>
-              <svg class="icon"><use xlink:href="#star-full" /></svg>
-              <svg class="icon"><use xlink:href="#star-full" /></svg>
-              <svg class="icon"><use xlink:href="#star-half" /></svg>
-              <svg class="icon"><use xlink:href="#star" /></svg>
+              <rating [rate]="4.5" class="readonly small"></rating>
             </span>
             <span>25 reviews</span>
           </span>
@@ -42,5 +38,22 @@
         </ion-card-content>
       </ion-card>
     </ion-row>
+  </ion-grid>
+  <ion-grid class="all_doc">
+    <p class="heading_title">History
+      <ion-button size="small" fill="clear" color="primary" [routerLink]="['/restaurants']">Show all</ion-button>
+    </p>
+    <ion-list lines="none" class="list">
+      <ion-item class="item" *ngFor="let item of [].constructor(8)" (click)="selectDoctor(item)">
+        <ion-thumbnail slot="start" class="_img">
+          <img src="https://assets.webiconspng.com/uploads/2017/09/Doctors-And-Nurses-PNG-Image-76675.png">
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap _info">
+          <h4 class="_name">Dr. M. Quamrul Islam Talukder</h4>
+          <p class="_exp">Cardiovascular & Thoracic Surgeon</p>
+          <p class="_ins">Dhaka Medical College</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
   </ion-grid>
 </ion-content>

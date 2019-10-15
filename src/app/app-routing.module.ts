@@ -25,7 +25,8 @@ const routes: Routes = [
   { path: 'doctor-details', loadChildren: './pages/doctor/details/details.module#DetailsPageModule' },
 
   { path: 'service-list', loadChildren: './pages/service/list/list.module#ListPageModule' },
-  { path: 'service-details', loadChildren: './pages/service/details/details.module#DetailsPageModule' }
+  { path: 'service-details', loadChildren: './pages/service/details/details.module#DetailsPageModule' },
+  { path: 'filter-list', loadChildren: './pages/doctor/filter-list/filter-list.module#FilterListPageModule' }
 
 ];
 @NgModule({
