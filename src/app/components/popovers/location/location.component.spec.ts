@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilterSearchComponent } from './filter-search.component';
+import { LocationComponent } from './location.component';
 
-describe('FilterSearchComponent', () => {
-  let component: FilterSearchComponent;
-  let fixture: ComponentFixture<FilterSearchComponent>;
+describe('LocationComponent', () => {
+  let component: LocationComponent;
+  let fixture: ComponentFixture<LocationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterSearchComponent ],
+      declarations: [ LocationComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterSearchComponent);
+    fixture = TestBed.createComponent(LocationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

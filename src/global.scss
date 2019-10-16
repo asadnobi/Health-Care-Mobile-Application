@@ -55,3 +55,9 @@ rating {display: inline-flex; z-index: 1;
 .searchbar-input-container.sc-ion-searchbar-ios{height: 100%;}
 .searchbar-input.sc-ion-searchbar-ios{border-radius: 4px;}
 .searchbar-search-icon.sc-ion-searchbar-ios{width: 18px;color: var(--ion-color-primary-contrast);}
+
+.sc-ion-popover-ios-h, .sc-ion-popover-md-h {--width: 90vw;
+  .popover-content {left: 5vw !important;}
+}
+
+
