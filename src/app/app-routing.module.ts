@@ -20,13 +20,14 @@ const routes: Routes = [
 
   { path: 'hospital-list', loadChildren: './pages/hospital/list/list.module#ListPageModule' },
   { path: 'hospital-details', loadChildren: './pages/hospital/details/details.module#DetailsPageModule' },
+  { path: 'hospital-filter-list', loadChildren: './pages/hospital/filter-list/filter-list.module#FilterListPageModule' },
 
   { path: 'doctor-list', loadChildren: './pages/doctor/list/list.module#ListPageModule' },
   { path: 'doctor-details', loadChildren: './pages/doctor/details/details.module#DetailsPageModule' },
+  { path: 'doctor-filter-list', loadChildren: './pages/doctor/filter-list/filter-list.module#FilterListPageModule' },
 
   { path: 'service-list', loadChildren: './pages/service/list/list.module#ListPageModule' },
   { path: 'service-details', loadChildren: './pages/service/details/details.module#DetailsPageModule' },
-  { path: 'filter-list', loadChildren: './pages/doctor/filter-list/filter-list.module#FilterListPageModule' }
 
 ];
 @NgModule({

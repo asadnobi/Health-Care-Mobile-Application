@@ -1,9 +1,59 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>list</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content class="content">
+  <ion-grid class="pop_doc">
+    <p class="heading_title">Popular Hospital
+      <ion-button size="small" fill="clear" color="primary" (click)="showAll()">Show all</ion-button>
+    </p>
+    <ion-row class="boxes">
+      <ion-card class="box" *ngFor="let item of [].constructor(5)" (click)="selectHospital(item)">
+        <ion-card-header class="_img" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+         url(https://www.assignmentpoint.com/wp-content/uploads/2013/09/Square-Hospital-Ltd.jpg) center top / cover"></ion-card-header>
+        <ion-card-content class="_info">
+          <span class="_name">Square Hospital</span>
+          <span class="_exp">Private hospital in Dhaka</span>
+          <span class="_rate">
+            <span>
+              <rating [rate]="4.5" class="readonly small"></rating>
+            </span>
+            <span>25 reviews</span>
+          </span>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="rec_doc">
+    <p class="heading_title">Recomemded for you
+      <ion-button size="small" fill="clear" color="primary" (click)="showAll()">Show all</ion-button>
+    </p>
+    <ion-row class="boxes">
+      <ion-card class="box" *ngFor="let item of [].constructor(5)" (click)="selectHospital(item)">
+        <ion-card-header class="_img" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+         url(https://upload.wikimedia.org/wikipedia/commons/e/e3/Apollo_Hospital_Dhaka_2014.jpg) center top / cover"></ion-card-header>
+        <ion-card-content class="_info">
+          <span class="_name">Apollo Hospitals</span>
+          <span class="_exp">Private hospital in Dhaka</span>
+          <span class="_dis">
+            <span>Bashundhara R/A</span>
+            <span>5km.</span>
+          </span>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="all_doc">
+    <p class="heading_title">History
+      <ion-button size="small" fill="clear" color="primary" (click)="showAll()">Show all</ion-button>
+    </p>
+    <ion-list lines="none" class="list">
+      <ion-item class="item" *ngFor="let item of [].constructor(8)" (click)="selectHospital(item)">
+        <ion-thumbnail slot="start" class="_img">
+          <img src="http://www.uhlbd.com/backend/web/uploads/1451280834DSC_0157.jpg">
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap _info">
+          <h4 class="_name">United Hospital Limited</h4>
+          <p class="_exp">General hospital</p>
+          <p class="_ins">Gulshan, Dhaka-1212</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
 </ion-content>

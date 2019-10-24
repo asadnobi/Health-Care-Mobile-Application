@@ -11,7 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // popover module
 import { LocationModule } from './components/popovers/location/location.module';
-
+//modals module
+import { FilterDoctorModule } from './components/modals/filter-doctor/filter-doctor.module';
+import { FilterHospitalModule } from './components/modals/filter-hospital/filter-hospital.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +21,9 @@ import { LocationModule } from './components/popovers/location/location.module';
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     // popover module
-    LocationModule
+    LocationModule,
+    // modal module
+    FilterDoctorModule, FilterHospitalModule
   ],
   providers: [
     StatusBar, SplashScreen,

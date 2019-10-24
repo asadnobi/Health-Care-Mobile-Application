@@ -8,7 +8,7 @@
     </ion-col>
     <ion-col size="12" class="search_bar">
       <ion-searchbar placeholder="What would you like?"></ion-searchbar>
-      <ion-button size="small" (click)="resFilterOpen()"><ion-icon slot="icon-only" name="options"></ion-icon></ion-button>
+      <ion-button size="small" (click)="doctorFilter()"><ion-icon slot="icon-only" name="options"></ion-icon></ion-button>
     </ion-col>
     <ion-col size="12" class="segment_bar">
       <ion-segment scrollable value="psycology">
@@ -34,7 +34,7 @@
     </ion-col>
   </ion-row>
   <ion-grid class="all_doc">
-    <ion-list lines="none" class="list">
+    <ion-list lines="none">
       <ion-list-header>Doctor List</ion-list-header>
       <ion-item class="item" *ngFor="let item of [].constructor(8)" (click)="selectDoctor(item)">
         <ion-thumbnail slot="start" class="_img">

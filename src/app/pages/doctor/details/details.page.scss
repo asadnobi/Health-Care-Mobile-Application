@@ -10,7 +10,7 @@
 }
 
 .content {--background: var(--body-bg-color);
-  .head_bar {min-height: 350px;
+  .head_bar {min-height: 400px;
       .action_bar {display: flex;justify-content: space-between; align-items: center;height: 60px;
           .button {--background: transparent;--background-focused: rgba(137, 137, 137, 0.15); --background-activated: rgba(137, 137, 137, 0.3);
               --box-shadow: none; margin: 0; text-transform: capitalize;
@@ -18,9 +18,9 @@
           }
       }
   }
-  .res_info {display: flex;flex-direction: column; padding: 1em 1.5em;background: #ffffff; position: relative;
+  .res_info {display: flex;flex-direction: column; padding: 1em 1.5em;background: rgba(255, 255, 255, .85); position: relative;
       border-top-left-radius: 8px;border-top-right-radius: 8px;border-bottom: 8px solid #495057;
-      box-shadow: 0px -5px 50px rgba(255, 255, 255, 0.3); margin: -75px 5px 0px;
+      box-shadow: 0px -5px 50px rgba(255, 255, 255, 0.3); margin: -150px 5px 0px;
       .name {font-size: 20px;font-weight: 500;line-height: 1.2; color: #212529;
           text-overflow: ellipsis;white-space: nowrap;overflow: hidden;width: 100%;
       }
@@ -38,7 +38,7 @@
         .like, .exp {font-weight: 600; color: #495057;}
       }
   }
-  .menu_bar {
+  .menu_bar {position: sticky; top: 55px; z-index: 99;
       ion-segment{--background: #ffffff;border-bottom: 1px solid #dee2e6; box-shadow: 0 0 60px rgba(0, 0, 0, .2);
           ion-segment-button {--border-radius: 0;--border-width: 0;min-height: 32px;--color: #212529; font-weight: 500;
               --background-checked: var(--ion-color-primary);--color-checked: var(--ion-color-primary-contrast);text-transform: unset;

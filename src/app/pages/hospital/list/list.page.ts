@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  // For view hospital full list with send filter data or without filter data. 
+  showAll(filter: string|undefined) {
+    this.router.navigate(['/hospital-filter-list']);
+  }
+  // For view a hospital details.
+  selectHospital(hospital) {
+    this.router.navigate(['/hospital-details']);
   }
 
 }

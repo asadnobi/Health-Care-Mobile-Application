@@ -2,14 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+
 import { IonicModule } from '@ionic/angular';
-import { ListPage } from './list.page';
-import { IonicRatingModule } from 'ionic4-rating';
+
+import { FilterListPage } from './filter-list.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ListPage
+    component: FilterListPage
   }
 ];
 
@@ -18,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    IonicRatingModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [ListPage]
+  declarations: [FilterListPage]
 })
-export class ListPageModule {}
+export class FilterListPageModule {}

@@ -1,9 +1,207 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
+<ion-header class="header">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">United Hospital Limited</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="heart-empty"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="content" [scrollEvents]="true" (ionScroll)="pageScroll($event)">
+  <ion-row class="head_bar" style="background: linear-gradient(to bottom, rgb(0, 0, 0, .6), rgba(0, 0, 0, 0)), url(https://2.bp.blogspot.com/-qw3u_W256Tc/V9FienuH-BI/AAAAAAAAJm4/NuNh8PmzVXogX6j3gADtUBIL_NIjxjYbgCLcB/s1600/United%2BHospit.JPG) center / cover">
+    <ion-col class="action_bar">
+      <ion-button class="backBtn" (click)="goBack()">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>Back
+      </ion-button>
+      <ion-button shape="round" class="favouriteBtn">
+        <ion-icon name="heart-empty"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="res_info">
+    <p class="name">United Hospital Limited</p>
+    <p class="expert">Private Hospital</p>
+    <p class="edu">Plot 15, Road 71, Gulshan, Dhaka-1212</p>
+    <p class="info">
+      <span class="rate">
+        <span>
+          <rating [rate]="4.85" class="readonly medium"></rating>
+        </span>
+        <span><strong>4.85</strong> (1024+ reviews)</span>
+      </span>
+    </p>
+  </ion-row>
+  <ion-row class="menu_bar">
+    <ion-segment (ionChange)="pageChange($event)" [value]="page">      
+      <ion-segment-button value="about">
+        <ion-label>About</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="review">
+        <ion-label>Review</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="service">
+        <ion-label>Service</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="contact">
+        <ion-label>Contact</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+  <ion-row class="page">
+    <ion-col class="about_page" *ngIf="page === 'about'">
+      <ion-card class="about_wrap">
+        <p class="title">About Info</p>
+        <p class="desc">Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.</p>
+        <p class="clearfix"></p>
+        <p class="title">Units</p>
+        <ul>
+          <li><span>MBBS (CMC)</span><span>Dhaka Medical College, Dhaka</span></li>
+          <li><span>BCS (Health)</span><span>Khulna Medical College, Khulna</span></li>
+          <li><span>FCPS (Neuro-Surgery)</span><span>Dhaka Medical College & Hospital, Dhaka</span></li>
+        </ul>
+        <p class="clearfix"></p>
+        <p class="title">Doctors</p>
+        <ul>
+          <li *ngFor="let item of [].constructor(5)">
+            <span>Dr. M. Quamrul Islam Talukder</span>
+            <span>Neuro Surgeon</span>
+            <span>MBBS (CMC), BCS (Health), FCPS (Neuro-Surgery)</span>
+          </li>
+        </ul>
+      </ion-card>
+    </ion-col>
+    <ion-col class="review_page" *ngIf="page === 'review'">
+      <ion-card class="review_wrap">
+        <span class="title">Users Reviews</span>
+        <span class="rating">
+          <span class="point">4.75</span>
+          <span class="text">
+            <span class="star">
+              <rating [rate]="4.75" class="readonly medium"></rating>
+              &nbsp; Very Good
+            </span>
+            <span class="pointer">1024 reveiws on Devoret</span>
+          </span>
+        </span>
+        <span class="rate_val">
+          <li><span>Location</span><span></span><span>70</span></li>
+          <li><span>Facility</span><span></span><span>80</span></li>
+          <li><span>Value of money</span><span></span><span>75</span></li>
+        </span>
+        <span class="reviews">
+          <ion-button expand="block" class="add_review_btn" [routerLink]="['/add-review']">Write a Review</ion-button>
+        </span>
+        <span class="reviews_list">
+          <ion-list-header>
+            <ion-label>What guest are saying</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-380-456332.png">
+            </ion-avatar>
+            <ion-label class="ion-text-wrap">
+              <span class="star">
+                <rating [rate]="4.75" class="readonly small"></rating>
+                4.75 out of 5
+              </span>
+              <span class="name">Jhon Smith <small>5 days ago</small></span>
+              <span class="message">Fantastic food. Not impressed with the delay in getting food due to the new website not being set up properly.
+                Could not get advertised discount through website and person on the phone did not even offer to sort it out.
+              </span>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnmjwkS73ax9eAMZFE-7khxxPDFmdK71idjPV0QJAnuld4LG5V4g">
+            </ion-avatar>
+            <ion-label class="ion-text-wrap">
+              <span class="star">
+                <rating [rate]="4.5" class="readonly small"></rating>
+                4.50 out of 5
+              </span>
+              <span class="name">Abdul Alim <small>1 month ago</small></span>
+              <span class="message">I’ve had chillis many times before and will still continue to order,
+                 really good food especially the tandoori and chefs specials!!! Must try
+              </span>
+            </ion-label>
+          </ion-item>
+          <ion-button expand="block" class="more_review_btn" [routerLink]="['/res-review']">
+            View all user reviews<ion-icon name="arrow-round-forward"></ion-icon>
+          </ion-button>
+        </span>
+      </ion-card>
+    </ion-col>
+    <ion-col class="service_page" *ngIf="page === 'service'">
+      <ion-card class="service_wrap">
+        <p class="title">Service List</p>
+        <ul>
+          <li>
+            <span>Care Medical College Hospital, Room- 315</span>
+            <span>06.00 - 08.00 PM (Every Day Except Thursday, Friday and Govt Holidays)</span>
+            <span>Main Mirpur Road, Sher-E-Bangla Nagar, Dhaka</span>
+            <span>500(new patient), 450(old patient), Free for Poor Patient</span>
+          </li>
+        </ul>
+      </ion-card>
+    </ion-col>
+    <ion-col class="contact_page" *ngIf="page === 'contact'">
+      <ion-card class="contact_wrap">
+        <span class="title">Additional Details</span>
+        <ion-list class="list">
+          <ion-item class="item">
+            <svg slot="start"><use xlink:href="#favourite" /></svg>
+            <ion-label class="ion-text-wrap"><a href="tel:912-821-4567">912-821-4567</a></ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <svg slot="start"><use xlink:href="#favourite" /></svg>
+            <ion-label class="ion-text-wrap"><a href="mailto:example@gmail.com">example@gmail.com</a></ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <svg slot="start"><use xlink:href="#favourite" /></svg>
+            <ion-label class="ion-text-wrap">
+              <span class="lg">Brick Lane Brasserie</span>
+              <span>67 Brick Ln, Spitalfields, London E1 6QL, UK</span>
+              <span><a href="">Get Direction</a></span>
+            </ion-label>
+          </ion-item>
+          <ion-item class="item" detail (click)="showSchedule()">
+            <svg slot="start"><use xlink:href="#favourite" /></svg>
+            <ion-label class="ion-text-wrap">Open Hours - 10:30am to 11:30pm(Today)</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <svg slot="start"><use xlink:href="#favourite" /></svg>
+            <ion-label class="ion-text-wrap">
+              <p>
+                <span>Indian</span><span>Chinese</span><span>Italian</span><span>Japanese</span>
+              </p>
+            </ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <svg slot="start"><use xlink:href="#favourite" /></svg>
+            <ion-label class="ion-text-wrap">
+              <span><span class="lg">Payment Options</span>AMEX, Carte Blanche, Diners Club, Discover, JCB, MasterCard, Visa</span><br>
+              <span><span class="lg">Private Party Facilities</span>Please contact the host team at Laurent at Café Royal via email</span><br>
+              <span><span class="lg">kids Zone</span></span>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar class="toolbar">
+    <ion-button expand="block" shape="round" color="primary">
+      <svg class="icon start"><use xlink:href="#doctor-3" /></svg>
+      Book Appoinment
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

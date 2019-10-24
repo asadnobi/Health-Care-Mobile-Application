@@ -15,7 +15,8 @@
 </ion-header>
 
 <ion-content class="content" [scrollEvents]="true" (ionScroll)="pageScroll($event)">
-  <ion-row class="head_bar" style="background: linear-gradient(to bottom, rgb(0, 0, 0, .5), rgba(0, 0, 0, 0)), url(http://www.medicaldirectorybd.com/uploads/images/doctor/samsul_islam_khan.jpg) center / cover">
+  <ion-row class="head_bar" style="background: linear-gradient(to bottom, rgb(0, 0, 0, .6), rgba(0, 0, 0, 0)),
+   url(https://www.herofincorp.com/sites/default/files/product-image/Doctor%20loan%20banner.jpg) center / cover">
     <ion-col class="action_bar">
       <ion-button class="backBtn" (click)="goBack()">
         <ion-icon slot="start" name="arrow-back"></ion-icon>Back
@@ -107,7 +108,7 @@
             <ion-avatar slot="start">
               <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-380-456332.png">
             </ion-avatar>
-            <ion-label text-wrap>
+            <ion-label class="ion-text-wrap">
               <span class="star">
                 <rating [rate]="4.75" class="readonly small"></rating>
                 4.75 out of 5
@@ -122,7 +123,7 @@
             <ion-avatar slot="start">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnmjwkS73ax9eAMZFE-7khxxPDFmdK71idjPV0QJAnuld4LG5V4g">
             </ion-avatar>
-            <ion-label text-wrap>
+            <ion-label class="ion-text-wrap">
               <span class="star">
                 <rating [rate]="4.5" class="readonly small"></rating>
                 4.50 out of 5
@@ -158,15 +159,15 @@
         <ion-list class="list">
           <ion-item class="item">
             <svg slot="start"><use xlink:href="#favourite" /></svg>
-            <ion-label text-wrap><a href="tel:912-821-4567">912-821-4567</a></ion-label>
+            <ion-label class="ion-text-wrap"><a href="tel:912-821-4567">912-821-4567</a></ion-label>
           </ion-item>
           <ion-item class="item">
             <svg slot="start"><use xlink:href="#favourite" /></svg>
-            <ion-label text-wrap><a href="mailto:example@gmail.com">example@gmail.com</a></ion-label>
+            <ion-label class="ion-text-wrap"><a href="mailto:example@gmail.com">example@gmail.com</a></ion-label>
           </ion-item>
           <ion-item class="item">
             <svg slot="start"><use xlink:href="#favourite" /></svg>
-            <ion-label text-wrap>
+            <ion-label class="ion-text-wrap">
               <span class="lg">Brick Lane Brasserie</span>
               <span>67 Brick Ln, Spitalfields, London E1 6QL, UK</span>
               <span><a href="">Get Direction</a></span>
@@ -174,11 +175,11 @@
           </ion-item>
           <ion-item class="item" detail (click)="showSchedule()">
             <svg slot="start"><use xlink:href="#favourite" /></svg>
-            <ion-label text-wrap>Open Hours - 10:30am to 11:30pm(Today)</ion-label>
+            <ion-label class="ion-text-wrap">Open Hours - 10:30am to 11:30pm(Today)</ion-label>
           </ion-item>
           <ion-item class="item">
             <svg slot="start"><use xlink:href="#favourite" /></svg>
-            <ion-label text-wrap>
+            <ion-label class="ion-text-wrap">
               <p>
                 <span>Indian</span><span>Chinese</span><span>Italian</span><span>Japanese</span>
               </p>
@@ -186,7 +187,7 @@
           </ion-item>
           <ion-item class="item">
             <svg slot="start"><use xlink:href="#favourite" /></svg>
-            <ion-label text-wrap>
+            <ion-label class="ion-text-wrap">
               <span><span class="lg">Payment Options</span>AMEX, Carte Blanche, Diners Club, Discover, JCB, MasterCard, Visa</span><br>
               <span><span class="lg">Private Party Facilities</span>Please contact the host team at Laurent at Café Royal via email</span><br>
               <span><span class="lg">kids Zone</span></span>
@@ -200,8 +201,8 @@
 
 <ion-footer class="footer">
   <ion-toolbar class="toolbar">
-    <ion-button expand="block" shape="round" color="secondary">
-      <svg class="icon start"><use xlink:href="#doctor-2" /></svg>
+    <ion-button expand="block" shape="round" color="primary">
+      <svg class="icon start"><use xlink:href="#doctor-3" /></svg>
       Book Appoinment
     </ion-button>
   </ion-toolbar>

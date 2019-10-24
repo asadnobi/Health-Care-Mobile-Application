@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController, ModalController } from '@ionic/angular';
 import { LocationComponent } from 'src/app/components/popovers/location/location.component';
-import { FilterDoctorComponent } from 'src/app/components/modals/filter-doctor/filter-doctor.component';
+import { FilterHospitalComponent } from 'src/app/components/modals/filter-hospital/filter-hospital.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-filter-list',
@@ -12,7 +13,8 @@ export class FilterListPage implements OnInit {
 
   constructor(
     public popoverCtrl: PopoverController,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    public router: Router
   ) { }
 
   ngOnInit() {
@@ -34,12 +36,14 @@ export class FilterListPage implements OnInit {
     const { data, role } = await location.onWillDismiss();
     console.log(data, role);
   }
-
-  async doctorFilter() {
+  async hospitalFilter() {
     const filter = await this.modalCtrl.create({
-      component: FilterDoctorComponent
+      component: FilterHospitalComponent
     });
     await filter.present();
+  }
+  selectHospital(hospital) {
+    this.router.navigate(['/hospital-details']);
   }
 
 }

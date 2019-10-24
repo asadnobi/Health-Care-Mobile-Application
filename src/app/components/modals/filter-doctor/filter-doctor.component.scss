@@ -1,0 +1,40 @@
+.header {
+  ion-toolbar {--background: var(--ion-color-primary-tint); --color: var(--ion-color-primary-contrast);
+      ion-title {font-weight: 500; text-transform: capitalize;}
+      ion-button {--color: var(--ion-color-primary-contrast); --color-activated: var(--ion-color-primary-contrast); --background-activated: var(--ion-color-primary-shade);}
+  }
+}
+.content {--background: var(--body-bg-light-color); --padding-top: 10px; --padding-bottom: 10px; --padding-start: 10px; --padding-end: 10px;
+  .more-info {background: #fff;padding: 8px;border-radius: 4px;
+      .head {
+          .expendable {float: right;padding:.5em .25em .5em 1em;
+              .icon {display: flex;color: #6c757d;transition: transform .5s ease;}
+          }
+          .title {font-size: 14px; line-height: 1.5; font-weight: 500; color: #211b27; text-transform: capitalize;}
+          .sub-title {font-size: 13px; line-height: 18px; font-weight: 400; color: #6c757d; letter-spacing: .5px;}
+      }
+      .body {height: 0;width: 100%;overflow: hidden;visibility: hidden;opacity: 0;
+          .clearfix {padding-top: .5em;display: block;}
+          .list {margin-bottom: 0;
+              .item {--padding-start: 8px; --inner-padding-end: 0; font-size: 14px;font-weight: 500;color: #211b27;
+                  --border-color: #ecf0f5;--border-style: dashed;--inner-border-width: 0;--border-width: 0 0 1px 0;
+                  &:last-child {--border-width: 0;}
+                  ion-label {display: flex; justify-content: space-between}
+                  ion-icon {margin-right: 8px;}
+              }
+          }
+          .chips {display: flex;overflow: scroll;
+            ion-chip {border-color: #cccccc; color: #6c757d;padding: 1em;display: inline-flex;align-items: center;
+                justify-content: center; min-width: fit-content;
+                &.active {background: var(--main-bg-color); color: var(--main-fg-color);}
+            }
+          }
+          //ion-range {padding: .5em .25em .25em;}
+      }
+      &.checked {
+          .head .expendable .icon {transform: rotate(180deg);}
+          .body {height: 100%;visibility: visible;opacity: 1;transition: all .5s ease;}
+      }
+      &:not(:first-child) {margin-top: .5em;}
+  }
+}

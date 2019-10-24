@@ -1,0 +1,151 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-title>Hospital Filter</ion-title>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-grid class="more-info checked">
+    <div class="head">
+      <div class="expendable">
+        <ion-icon class="icon" name="arrow-down" (click)="expendable($event)"></ion-icon>
+      </div>
+      <p class="title big">Location:</p>
+      <p class="sub-title">Please select atleast one</p>
+    </div>
+    <div class="body">
+      <span class="clearfix"></span>
+      <ion-list class="list">
+        <ion-radio-group>
+          <ion-item class="item">
+            <ion-radio slot="end" value="dhaka" checked></ion-radio>
+            <ion-label>Dhaka</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="chottogram"></ion-radio>
+            <ion-label>Chottogram</ion-label>
+          </ion-item>
+          <ion-item class="item" button>
+            <ion-label>Pick a location</ion-label>
+            <ion-icon slot="start" name="pin" color="medium"></ion-icon>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </div>
+  </ion-grid>
+  <ion-grid class="more-info">
+    <div class="head">
+      <div class="expendable">
+        <ion-icon class="icon" name="arrow-down" (click)="expendable($event)"></ion-icon>
+      </div>
+      <p class="title big">Category:</p>
+      <p class="sub-title">Please select atleast one</p>
+    </div>
+    <div class="body">
+      <span class="clearfix"></span>
+      <ion-list class="list">
+        <ion-radio-group>
+          <ion-item class="item">
+            <ion-radio slot="end" value="private" checked></ion-radio>
+            <ion-label>Private</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="general"></ion-radio>
+            <ion-label>General</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="community"></ion-radio>
+            <ion-label>community</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="osteopathic"></ion-radio>
+            <ion-label>osteopathic</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="rehabilitation"></ion-radio>
+            <ion-label>rehabilitation</ion-label>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </div>
+  </ion-grid>
+  <ion-grid class="more-info">
+    <div class="head">
+      <div class="expendable">
+        <ion-icon class="icon" name="arrow-down" (click)="expendable($event)"></ion-icon>
+      </div>
+      <p class="title big">Type:</p>
+      <p class="sub-title">You can select restaurant type</p>
+    </div>
+    <div class="body">
+      <span class="clearfix"></span>
+      <ion-list class="list">
+        <ion-radio-group>
+          <ion-item class="item">
+            <ion-radio slot="end" value="1" checked></ion-radio>
+            <ion-label>Specialist</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="2"></ion-radio>
+            <ion-label>Proffessor</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="3"></ion-radio>
+            <ion-label>Doctor</ion-label>
+          </ion-item>
+          <ion-item class="item">
+            <ion-radio slot="end" value="4"></ion-radio>
+            <ion-label>Consultant</ion-label>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </div>
+  </ion-grid>
+  <ion-grid class="more-info">
+    <div class="head">
+      <div class="expendable">
+        <ion-icon class="icon" name="arrow-down" (click)="expendable($event)"></ion-icon>
+      </div>
+      <p class="title big">Price:</p>
+      <p class="sub-title">You can select price range</p>
+    </div>
+    <div class="body">
+      <span class="clearfix"></span>
+      <div class="chips">
+        <ion-chip outline="true">
+          <ion-label>500</ion-label>
+        </ion-chip>
+        <ion-chip outline="true" class="active">
+          <ion-label>600 - 1000</ion-label>
+        </ion-chip>
+        <ion-chip outline="true">
+          <ion-label>1100 - 1500</ion-label>
+        </ion-chip>
+        <ion-chip outline="true">
+          <ion-label>2000</ion-label>
+        </ion-chip>
+      </div>
+    </div>
+  </ion-grid>
+  <ion-grid class="more-info">
+    <div class="head">
+      <div class="expendable">
+        <ion-icon class="icon" name="arrow-down" (click)="expendable($event)"></ion-icon>
+      </div>
+      <p class="title big">Rating:</p>
+      <p class="sub-title">You can filter res. by user rating</p>
+    </div>
+    <div class="body">
+      <span class="clearfix"></span>
+      <ion-range dualKnobs="true" min="1" max="5" step="1" snaps="true" color="primary" pin="true">
+        <ion-icon slot="start" name="star-outline" color="primary"></ion-icon>
+        <ion-icon slot="end" name="star" color="primary"></ion-icon>
+      </ion-range>
+    </div>
+  </ion-grid>
+</ion-content>

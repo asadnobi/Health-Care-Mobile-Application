@@ -1,0 +1,51 @@
+<ion-content class="content" [scrollEvents]="true" (ionScroll)="pageScroll($event)">
+  <ion-row class="header">
+    <ion-col size="12" class="title_bar">
+      <div class="heading" (click)="changeLocation($event)">
+        <span>Looking For</span>
+        <span>Current Location <ion-icon name="arrow-down"></ion-icon></span>
+      </div>
+    </ion-col>
+    <ion-col size="12" class="search_bar">
+      <ion-searchbar placeholder="What would you like?"></ion-searchbar>
+      <ion-button size="small" (click)="hospitalFilter()"><ion-icon slot="icon-only" name="options"></ion-icon></ion-button>
+    </ion-col>
+    <ion-col size="12" class="segment_bar">
+      <ion-segment scrollable value="private">
+        <ion-segment-button value="private">
+          <ion-label>Private</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="general">
+          <ion-label>General</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="community">
+          <ion-label>Community</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="non-community">
+          <ion-label>Non-Community</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="osteopathic">
+          <ion-label>Osteopathic</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="rehabilitation">
+          <ion-label>Rehabilitation</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+  </ion-row>
+  <ion-grid class="all_doc">
+    <ion-list lines="none">
+      <ion-list-header>Hospital List</ion-list-header>
+      <ion-item class="item" *ngFor="let item of [].constructor(8)" (click)="selectHospital(item)">
+        <ion-thumbnail slot="start" class="_img">
+          <img src="http://www.uhlbd.com/backend/web/uploads/1451280834DSC_0157.jpg">
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap _info">
+          <h4 class="_name">United Hospital Limited</h4>
+          <p class="_exp">General hospital</p>
+          <p class="_ins">Gulshan, Dhaka-1212</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>
