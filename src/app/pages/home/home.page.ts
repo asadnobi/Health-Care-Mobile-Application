@@ -11,5 +11,12 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
   }
+  pageScroll(ev) {
+    if(ev.detail.scrollTop > 20){
+      ev.target.firstChild.classList.add('fixed');
+    }else {
+      ev.target.firstChild.classList.remove('fixed');
+    }  
+  }
 
 }

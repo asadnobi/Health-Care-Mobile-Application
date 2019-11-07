@@ -1,16 +1,67 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon slot="icon-only" name="search"></ion-icon>
-      </ion-button>
-      <ion-button>
-        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+<ion-content class="content" [scrollEvents]="true" (ionScroll)="pageScroll($event)">
+  <ion-toolbar class="header">    
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 class="name">Hi Hammam</h2>
+        <p class="desc">How is your health?</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="search"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
   </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+  <ion-grid>
+    <ion-row class="find_by">
+      <ion-card class="box">
+        <ion-card-content>
+          <svg><use xlink:href="#patient" /></svg>
+          <p class="title">Food Order</p>
+          <p class="sub-title">Food Near by restaurants</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="box">
+        <ion-card-content>
+          <svg><use xlink:href="#doctor" /></svg>
+          <p class="title">Book a Table</p>
+          <p class="sub-title">Find within 3 miles radius</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="box">
+        <ion-card-content>
+          <svg><use xlink:href="#urban" /></svg>
+          <p class="title">Top Discount</p>
+          <p class="sub-title">Find within 3 miles radius</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="box">
+        <ion-card-content>
+          <svg><use xlink:href="#healthcare-and-medical-2" /></svg>
+          <p class="title">Special Offer</p>
+          <p class="sub-title">Find within 3 miles radius</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="box">
+        <ion-card-content>
+          <svg><use xlink:href="#doctor-2" /></svg>
+          <p class="title">Collection</p>
+          <p class="sub-title">Find within 3 miles radius</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="box">
+        <ion-card-content>
+          <svg><use xlink:href="#healthcare-and-medical-1" /></svg>
+          <p class="title">Delivery</p>
+          <p class="sub-title">Find within 3 miles radius</p>
+      </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
 </ion-content>
