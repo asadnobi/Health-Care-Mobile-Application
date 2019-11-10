@@ -1,5 +1,5 @@
-<ion-content class="content" [scrollEvents]="true" (ionScroll)="pageScroll($event)">
-  <ion-toolbar class="header">    
+<ion-header class="header">
+  <ion-toolbar class="toolbar">    
     <ion-item lines="none">
       <ion-avatar slot="start">
         <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png">
@@ -18,50 +18,142 @@
       </ion-buttons>
     </ion-item>
   </ion-toolbar>
-  <ion-grid>
+</ion-header>
+<ion-content class="content">
+  <ion-grid class="wrapper">
     <ion-row class="find_by">
-      <ion-card class="box">
+      <ion-card>
         <ion-card-content>
-          <svg><use xlink:href="#patient" /></svg>
-          <p class="title">Food Order</p>
-          <p class="sub-title">Food Near by restaurants</p>
+          <svg><use xlink:href="#life" /></svg>
+          <p class="title">Take care your health</p>
+          <p class="sub-title">Prevention is better then cure</p>
         </ion-card-content>
       </ion-card>
-      <ion-card class="box">
+      <ion-card>
         <ion-card-content>
-          <svg><use xlink:href="#doctor" /></svg>
-          <p class="title">Book a Table</p>
-          <p class="sub-title">Find within 3 miles radius</p>
+          <svg><use xlink:href="#doctor-3" /></svg>
+          <p class="title">Find doctor near you</p>
+          <p class="sub-title">Make an appoinment with them</p>
         </ion-card-content>
       </ion-card>
-      <ion-card class="box">
+      <ion-card>
         <ion-card-content>
           <svg><use xlink:href="#urban" /></svg>
           <p class="title">Top Discount</p>
           <p class="sub-title">Find within 3 miles radius</p>
         </ion-card-content>
       </ion-card>
-      <ion-card class="box">
+      <ion-card>
         <ion-card-content>
           <svg><use xlink:href="#healthcare-and-medical-2" /></svg>
           <p class="title">Special Offer</p>
           <p class="sub-title">Find within 3 miles radius</p>
         </ion-card-content>
       </ion-card>
-      <ion-card class="box">
+      <ion-card>
         <ion-card-content>
           <svg><use xlink:href="#doctor-2" /></svg>
           <p class="title">Collection</p>
           <p class="sub-title">Find within 3 miles radius</p>
         </ion-card-content>
       </ion-card>
-      <ion-card class="box">
+      <ion-card>
         <ion-card-content>
           <svg><use xlink:href="#healthcare-and-medical-1" /></svg>
           <p class="title">Delivery</p>
           <p class="sub-title">Find within 3 miles radius</p>
       </ion-card-content>
       </ion-card>
+    </ion-row>
+    <ion-row class="categories">
+      <ion-card>
+        <ion-card-content>
+          <svg><use xlink:href="#health-1" /></svg>
+          <ion-text class="title">Hospitals</ion-text>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <svg><use xlink:href="#doctor-1" /></svg>
+          <ion-text class="title">Doctors</ion-text>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <svg><use xlink:href="#blood-bag-1" /></svg>
+          <ion-text class="title">Blood</ion-text>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <svg><use xlink:href="#healthcare-and-medical-2" /></svg>
+          <ion-text class="title">Laboratory</ion-text>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <svg><use xlink:href="#transportation" /></svg>
+          <ion-text class="title">Ambulance</ion-text>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <svg><use xlink:href="#healthcare-and-medical-1" /></svg>
+          <ion-text class="title">Pharmacy</ion-text>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+    <ion-row class="popular_hos">
+      <ion-col size="12" class="heading_title">
+        <ion-text>Popular Hospital<br>
+          <small>Find the best hospital near you</small>
+        </ion-text>
+        <ion-button size="small" fill="clear" routerLink="/hospital-list">More
+          <svg class="icon end"><use xlink:href="#next" /></svg>
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" class="boxes">
+        <ion-card class="box" *ngFor="let item of [].constructor(5)" (click)="selectHospital(item)">
+          <ion-card-header class="_img" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('assets/images/hospital_1.jpg') center top / cover"></ion-card-header>
+          <ion-card-content class="_info">
+            <span class="_name">Square Hospital</span>
+            <span class="_exp">Private hospital in Dhaka</span>
+            <span class="_rate">
+              <span>
+                <rating [rate]="4.5" class="readonly small"></rating>
+              </span>
+              <span>25 reviews</span>
+            </span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="popular_doc">
+      <ion-col size="12" class="heading_title">
+        <ion-text>Popular Doctors<br>
+          <small>Discuss health directly with a doctor</small>
+        </ion-text>
+        <ion-button size="small" fill="clear" routerLink="/doctor-list">More
+          <svg class="icon end"><use xlink:href="#next" /></svg>
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" class="boxes">
+        <ion-card class="box" *ngFor="let item of [].constructor(5)" (click)="selectDoctor(item)">
+          <ion-card-header class="_img" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+           url(assets/images/doctor_2.png) center top / cover"></ion-card-header>
+          <ion-card-content class="_info">
+            <span class="_name">Dr. Siddika Sultana Nira</span>
+            <span class="_exp">Gynecological Oncology</span>
+            <span class="_rate">
+              <span>
+                <rating [rate]="4.5" class="readonly small"></rating>
+              </span>
+              <span>25 reviews</span>
+            </span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

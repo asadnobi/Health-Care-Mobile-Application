@@ -4,51 +4,45 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'home',
         children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-          }
+          {path: '', loadChildren: '../pages/home/home.module#HomePageModule'}
         ]
       },
       {
-        path: 'tab2',
+        path: 'setting',
         children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-          }
+          {path: '', loadChildren: '../pages/setting/setting.module#SettingPageModule'}
         ]
       },
       {
-        path: 'tab3',
+        path: 'notification',
         children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-          }
+          {path: '', loadChildren: '../pages/notification/notification.module#NotificationPageModule'}
         ]
       },
       {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
+        path: 'account',
+        children: [
+          {path: '', loadChildren: '../pages/user/account/account.module#AccountPageModule'}
+        ]
+      },
+      {
+        path: 'activity',
+        children: [
+          {path: '', loadChildren: '../pages/user/activity/activity.module#ActivityPageModule'}
+        ]
+      },
+      {
+        path: '', redirectTo: '/tabs/home', pathMatch: 'full'
       }
     ]
   },
-  {
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
-  }
+  {path: '', redirectTo: '/tabs/home', pathMatch: 'full'}
 ];
 
 @NgModule({

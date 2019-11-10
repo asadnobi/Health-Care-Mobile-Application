@@ -2,15 +2,14 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+  { path: '', redirectTo: 'tabs', pathMatch: 'full' },
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'setting', loadChildren: './pages/setting/setting.module#SettingPageModule' },
+  { path: 'notification', loadChildren: './pages/notification/notification.module#NotificationPageModule' },
 
   { path: 'account', loadChildren: './pages/user/account/account.module#AccountPageModule' },
-  { path: 'sing-in', loadChildren: './pages/user/sing-in/sing-in.module#SingInPageModule' },
-  { path: 'sing-up', loadChildren: './pages/user/sing-up/sing-up.module#SingUpPageModule' },
+  { path: 'sign-up', loadChildren: './pages/user/sign-up/sign-up.module#SignUpPageModule' },
+  { path: 'sign-in', loadChildren: './pages/user/sign-in/sign-in.module#SignInPageModule' },
   { path: 'change-pass', loadChildren: './pages/user/change-pass/change-pass.module#ChangePassPageModule' },
   { path: 'forget-pass', loadChildren: './pages/user/forget-pass/forget-pass.module#ForgetPassPageModule' },
   { path: 'activity', loadChildren: './pages/user/activity/activity.module#ActivityPageModule' },
@@ -26,8 +25,6 @@ const routes: Routes = [
   { path: 'doctor-details', loadChildren: './pages/doctor/details/details.module#DetailsPageModule' },
   { path: 'doctor-filter-list', loadChildren: './pages/doctor/filter-list/filter-list.module#FilterListPageModule' },
 
-  { path: 'service-list', loadChildren: './pages/service/list/list.module#ListPageModule' },
-  { path: 'service-details', loadChildren: './pages/service/details/details.module#DetailsPageModule' },
 
 ];
 @NgModule({

@@ -1,21 +1,24 @@
-<ion-tabs>
-
+<ion-tabs (ionTabsWillChange)="changeTab($event)">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1">
-      <ion-icon name="flash"></ion-icon>
-      <ion-label>Tab One</ion-label>
+    <ion-tab-button tab="activity">
+      <svg class="icon"><use xlink:href="#shield-1" /></svg>
     </ion-tab-button>
-
-    <ion-tab-button tab="tab2">
-      <ion-icon name="apps"></ion-icon>
-      <ion-label>Tab Two</ion-label>
+    <ion-tab-button tab="account">
+      <svg class="icon"><use xlink:href="#account-1" /></svg>
     </ion-tab-button>
-
-    <ion-tab-button tab="tab3">
-      <!-- <ion-icon name="send"></ion-icon> -->
-      <svg class="icon"><use xlink:href="#internet" /></svg>
-      <ion-label>Tab Three</ion-label>
+    <ion-tab-button disabled>
+      <!-- <svg class="icon"><use xlink:href="#internet" /></svg> -->
+    </ion-tab-button>
+    <ion-tab-button tab="notification">
+      <svg class="icon"><use xlink:href="#bell-1" /></svg>
+    </ion-tab-button>
+    <ion-tab-button tab="setting">
+      <svg class="icon"><use xlink:href="#wheel-1" /></svg>
     </ion-tab-button>
   </ion-tab-bar>
-
 </ion-tabs>
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button routerLink="" color="{{color}}">
+    <svg class="icon"><use xlink:href="#page" /></svg>
+  </ion-fab-button>
+</ion-fab>
