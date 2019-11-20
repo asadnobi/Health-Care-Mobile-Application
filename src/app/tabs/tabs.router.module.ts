@@ -10,31 +10,31 @@ const routes: Routes = [
       {
         path: 'home',
         children: [
-          {path: '', loadChildren: '../pages/home/home.module#HomePageModule'}
+          {path: '', loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)}
         ]
       },
       {
         path: 'setting',
         children: [
-          {path: '', loadChildren: '../pages/setting/setting.module#SettingPageModule'}
+          {path: '', loadChildren: () => import('../pages/setting/setting.module').then(m => m.SettingPageModule)}
         ]
       },
       {
         path: 'notification',
         children: [
-          {path: '', loadChildren: '../pages/notification/notification.module#NotificationPageModule'}
+          {path: '', loadChildren: () => import('../pages/notification/notification.module').then(m => m.NotificationPageModule)}
         ]
       },
       {
         path: 'account',
         children: [
-          {path: '', loadChildren: '../pages/user/account/account.module#AccountPageModule'}
+          {path: '', loadChildren: () => import('../pages/user/account/account.module').then(m => m.AccountPageModule)}
         ]
       },
       {
         path: 'activity',
         children: [
-          {path: '', loadChildren: '../pages/user/activity/activity.module#ActivityPageModule'}
+          {path: '', loadChildren: () => import('../pages/user/activity/activity.module').then(m => m.ActivityPageModule)}
         ]
       },
       {

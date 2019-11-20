@@ -18,8 +18,8 @@
     .categories {padding: 1em; 
       display: grid; grid-template-columns: repeat(3, 1fr);
       ion-card {margin: 0;box-shadow: none; border-radius: 0;
-        &:nth-child(n+4) {border-top: 1px solid #ffffff;}
-        &:nth-child(n+1) {border-right: 1px solid #ffffff;}
+        &:nth-child(n+4) {border-top: 1px solid #dddddd;}
+        &:nth-child(n+1) {border-right: 1px solid #dddddd;}
         &:nth-child(3n) {border-right: 0;}
         ion-card-content {display: flex; flex-direction: column; align-items: center; justify-content: center;
           text-align: center; padding: .5em; min-height: 90px;
@@ -28,12 +28,12 @@
         }
       }
     }
-    .popular_hos, .popular_doc {margin-top: 1em;padding-top: 1em; border-top-left-radius: 24px; border-top-right-radius: 24px;
+    .popular_hos, .popular_doc {margin: 1em 0;padding-top: 1em; border-top-left-radius: 24px; border-top-right-radius: 24px;
       background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0)); box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.02);
       .boxes {overflow-x: auto; display: flex; flex-flow: row;
-        .box {margin: 0 .5em 1em; min-width: 250px;
+        .box {margin: .5em 1em 1em .5em; min-width: 250px;
           ._img {height: 150px;}
-          ._info {display: flex;flex-direction: column;
+          ._info {display: flex;flex-direction: column; background: #ffffff;
             ._name {font-size: 16px;font-weight: 500;line-height: 1.2; color: #212529;}
             ._exp {font-size: 12px;font-weight: 400;line-height: 1.2; color: #212529;}
             ._rate {display: flex; flex-direction: row; align-items: center; margin-top: 5px;
