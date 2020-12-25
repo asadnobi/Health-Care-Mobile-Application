@@ -10,7 +10,9 @@ export class ListPage implements OnInit {
 
   constructor(
     public router: Router
-  ) { }
+  ) {
+    
+  }
 
   ngOnInit() {
   }
@@ -20,7 +22,7 @@ export class ListPage implements OnInit {
     this.router.navigate(['/hospital-filter-list']);
   }
   // For view a hospital details.
-  selectHospital(hospital) {
+  selectHospital(hospitalData) {
     this.router.navigate(['/hospital-details']);
   }
 

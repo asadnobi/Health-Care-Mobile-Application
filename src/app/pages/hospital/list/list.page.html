@@ -1,22 +1,14 @@
 <ion-header class="header">
-  <ion-toolbar class="toolbar" color="primary">    
-    <ion-item lines="none" color="primary">
-      <ion-avatar slot="start">
-        <img src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png">
-      </ion-avatar>
-      <ion-label>
-        <h2 class="name">Hi Hammam</h2>
-        <p class="desc">How is your health?</p>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button routerLink="/hospital-filter-list">
-          <ion-icon name="search"></ion-icon>
-        </ion-button>
-        <ion-button>
-          <ion-icon name="notifications-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
+  <ion-toolbar class="toolbar" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hospital</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content class="content">
