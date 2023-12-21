@@ -1,7 +1,6 @@
 # Health Care Mobile Application – Transforming Healthcare through Digitalization
 
 
-Health Care Mobile App – Transforming Healthcare DigitallyHealth Care Mobile App – Transforming Healthcare Digitally
 I am excited to present a revolutionary health care mobile application that leverages the power of Node.js and Ionic framework to transform the traditional healthcare landscape. This innovative application is designed to address the growing need for digitization in the healthcare sector, making medical services more accessible, efficient, and convenient than ever before.
 
 Key Features:
