@@ -5,6 +5,7 @@ Health Care Mobile App – Transforming Healthcare DigitallyHealth Care Mobile A
 I am excited to present a revolutionary health care mobile application that leverages the power of Node.js and Ionic framework to transform the traditional healthcare landscape. This innovative application is designed to address the growing need for digitization in the healthcare sector, making medical services more accessible, efficient, and convenient than ever before.
 
 Key Features:
+
 ✓ Seamless Registration and Login: Users can easily create accounts and securely log in to access a wide range of healthcare services.
 
 ✓ Doctor Profile Lookup: The application provides users with comprehensive doctor profiles, allowing them to search for healthcare professionals based on their specialties, experience, and availability.
@@ -22,6 +23,7 @@ Key Features:
 ✓ Lab Test Online Report Collection: Users can conveniently access their lab test reports online, eliminating the need for physical visits to healthcare facilities.
 
 ✓ Secure Online Payment System: The application incorporates a secure online payment system, allowing users to make hassle-free payments for medical services, consultations, and medication.
+
 
 ![health-care-app-1](https://user-images.githubusercontent.com/24413519/201460186-6c20409b-d3f8-4bf8-986b-3c7306928028.jpg)
 ![health-care-app-2](https://user-images.githubusercontent.com/24413519/201460191-ae927fba-4040-4782-be88-976a992cc70c.jpg)
